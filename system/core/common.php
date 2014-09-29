@@ -27,7 +27,7 @@
 	{
 		/*if(file_exists(STYLE_CORE . 'clients/'. $dir . '/global.css'))
 			echo $dir . " EXISTS";
-	*/
+		*/
 
 	}
 	

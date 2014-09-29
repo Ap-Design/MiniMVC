@@ -1,4 +1,6 @@
-<?php
+<?php require(PROTECT);
+
+# Not even entirely sure if this model is functional, but feel free to work on this if you are a developer.
 
 class models_Db {
 

@@ -1,15 +1,8 @@
 <?php	require(PROTECT);
 	/*	-------------------------- 	*
-	 *			YUNAITE CORE		*
-	 *		By Devontrae M. Walls	*
+	 *			MiniMVC				*
+	 *		By ForkLabs, LLC.		*
 	 *	--------------------------	*/
-	
-	/*	--------------------------	*
-	 *		  PHPBB3 Session      	*
-	 *	--------------------------	*/
-
-	// Serialized version of our userdata array
-	define('USERDATA', serialize($userdata));
 	
 	/*	--------------------------	*
 	 *		  Load Errors       	*
@@ -86,7 +79,7 @@
 	$var = $uri->getURI('var');
 	$args = $uri->getURI('args');
 	
-	/* Lets find the requested Controller */
+	# Lets find the requested Controller
 	if(file_exists(CONTROLLERS . $controller . '.php'))
 		require(CONTROLLERS . $controller . '.php');
 	else
@@ -105,10 +98,10 @@
 	$args = $rebuild_args;
 	
 	
-	/* Assuming the script made it this far, create an instance of the requested controller */
+	# Assuming the script made it this far, create an instance of the requested controller
 	$YU_CONTROLLER = new $controller();
 	
-	//Now lets check to see if the method exists in this Class 
+	# Now lets check to see if the method exists in this Class 
 	if(method_exists($YU_CONTROLLER, $method))
 		call_user_func_array(array($YU_CONTROLLER, $method), $args);
 	else

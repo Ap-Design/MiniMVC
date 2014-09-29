@@ -1,10 +1,10 @@
 <?php
 
 	/*	--------------------------- *	
-	 *	Yunaite Framework	v.01	*
-	 *	August 2011					*
+	 *	MiniMVC Framework	v1.0.0	*
+	 *	September 2014				*
 	 *	Devontrae Marqualius Walls 	*
-	 *	DevontraeMWalls@yunaite.com	*
+	 *	Devontrae@ForkLabsLLC.com	*
 	 *	http://devontrae.com		*
 	 *	--------------------------- *
 			Notes to Devs
@@ -12,7 +12,7 @@
 			
 	 I.		Please Keep all code clean, neat, and organized!
 	 II.	Do not include the closing PHP tag (?>) at the end of
-			Yunaite Applications. 
+			scripts.
 			
 	 *	---------------------------	*
 	 *	Lets define the Environment *
@@ -55,10 +55,7 @@
 	 define('PROTECT', CONFIG_PATH . 'protect.php');
 
 	/*	----------------------------- *
-	 *	  Yunaite's Core Processor	  *
+	 *	  Load the Core 			  *
 	 *	----------------------------- */
 			
 	require(SYSTEM_PATH . 'core.php');
-	
-	
-	

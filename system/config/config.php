@@ -1,22 +1,22 @@
 <?php require(PROTECT);
 
  /*	-------------------------------------- *
-  *		RawFront Configuration File		   *
+  *		MiniMVC Configuration File		   *
   * -------------------------------------- */
   
 	define('YU_PATH', '');
   
-	/* URI stuff */
+	# URI stuff
 	
 	define('DEFAULT_CONTROLLER', 'home');
 	define('DEFAULT_METHOD', 'index');
 	
-	/* Template stuff */
+	# Template stuff
 	
 	define('USING_TEMPLATE', 'default');
 	define('TEMPLATES', APPLICATION_PATH . 'templates/');
 	
-	/* DATABASE stuff */
+	# DATABASE stuff
 	
 	$CONFIG_database = array(
 		'host' => '',
@@ -26,7 +26,7 @@
 		'enable' => FALSE
 	);
 	
-		/* Library stuff */
+	# Library stuff { Library deactivated by default, but may be enabled. }
 
 	//define('USING_LIBRARIES', 'default');
 	//define('LIBRARIESS', APPLICATION_PATH . 'libraries/');
