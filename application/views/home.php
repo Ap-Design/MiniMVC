@@ -1,5 +1,3 @@
-<?php 
+<?php require(PROTECT);
 
-echo "Home works~";
-
-
+echo "ForkLabs MiniMVC Framework is fully functional.";

@@ -12,7 +12,7 @@
 		}
 		
 		function index() {
-			echo "miniMVC by ForkLabs, LLC.";
+			$this->view->load('home');
 		}
 		
 		function test($var1, $var2, $var3) {
