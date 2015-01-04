@@ -35,7 +35,8 @@
 	define('BASE_PATH', dirname(realpath(__FILE__)));
 	define('APPLICATION_PATH', BASE_PATH . '/application/');
 	define('SYSTEM_PATH', BASE_PATH . '/system/');
-	define('CONFIG_PATH', SYSTEM_PATH . 'config/');
+	define('SYSTEM_CONFIG_PATH', SYSTEM_PATH . 'config/');
+	define('CONFIG_PATH', APPLICATION_PATH . 'config/');
 	define('CORE_PATH', SYSTEM_PATH . '/core/');
 	define('LIBRARIES', SYSTEM_PATH . 'libraries/');
 	define('CONTROLLERS', APPLICATION_PATH . 'controllers/');
@@ -52,7 +53,7 @@
 	 *	       direct access.		   *
 	 *	------------------------------ */
 	 
-	 define('PROTECT', CONFIG_PATH . 'protect.php');
+	 define('PROTECT', SYSTEM_CONFIG_PATH . 'protect.php');
 
 	/*	----------------------------- *
 	 *	  Load the Core 			  *

@@ -31,4 +31,5 @@
 	//define('USING_LIBRARIES', 'default');
 	//define('LIBRARIESS', APPLICATION_PATH . 'libraries/');
 	
-	
+	# Error Override
+	define('YU_ERROR_OVERRIDE', false);
