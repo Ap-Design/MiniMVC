@@ -102,15 +102,22 @@
 	$YU_CONTROLLER = new $controller();
 	
 	# Now lets check to see if the method exists in this Class 
-	if(method_exists($YU_CONTROLLER, $method))
+	if(method_exists($YU_CONTROLLER, $method)) {
 		call_user_func_array(array($YU_CONTROLLER, $method), $args);
-	else
-		echo FATAL_ERROR_OPEN."Method <b>'" . $method . "'</b> does not exist in class: <b>'" . $controller . "'</b>".FATAL_ERROR_CLOSE;
-	
-	
-	 
+	} else {
+		if(YU_ERROR_OVERRIDE) {
+			# Lets require the default controller
+			$YU_DEFAULT_CONTROLLER_FILE = CONTROLLERS . DEFAULT_CONTROLLER . '.php';
+			
+			if(file_exists($YU_DEFAULT_CONTROLLER_FILE))
+				require($YU_DEFAULT_CONTROLLER_FILE);
+			else
+				die(FATAL_ERROR_OPEN.'Cannot find <b>default</b> controller: <b>'.DEFAULT_CONTROLLER.'</b>'.FATAL_ERROR_CLOSE);
+			
+			$controller = DEFAULT_CONTROLLER;
+			$YU_CONTROLLER = new $controller();
 
-	 
-	 
-	
-	
+			call_user_func_array(array($YU_CONTROLLER, 'error_override'), $args);
+		} else {
+			echo FATAL_ERROR_OPEN."Method <b>'" . $method . "'</b> does not exist in class: <b>'" . $controller . "'</b>".FATAL_ERROR_CLOSE;
+		}

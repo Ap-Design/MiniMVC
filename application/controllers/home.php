@@ -18,6 +18,12 @@
 		function test($var1, $var2, $var3) {
 			echo "Test Controller ".$var1.", ".$var2.", and ".$var3;
 		}
+
+		# This is necessary if you have CONFIG/ERROR_OVERRIDE set to true.
+		# To set error override to true, visit application/config/config.php line: 35
+		function error_override() {
+			echo '404 NOT FOUND';
+		}
 	}
 
 	
