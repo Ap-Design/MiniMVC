@@ -121,3 +121,4 @@
 		} else {
 			echo FATAL_ERROR_OPEN."Method <b>'" . $method . "'</b> does not exist in class: <b>'" . $controller . "'</b>".FATAL_ERROR_CLOSE;
 		}
+	}
